@@ -33,8 +33,7 @@ module BeforeRenderInstance
   #
   def render_with_before_render_filter *opts, &blk
     run_before_render_filters
-    rv = render_without_before_render_filter(*opts, &blk)
-    return rv
+    render_without_before_render_filter(*opts, &blk)
   end
 
   private
